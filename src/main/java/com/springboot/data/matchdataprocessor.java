@@ -48,6 +48,12 @@ public class matchdataprocessor implements ItemProcessor<MatchInput, Match> {
 	    match.setTossWinner(matchinput.getToss_winner());
 	    match.setMatchWinner(matchinput.getWinner());
 	    match.setResult(matchinput.getResult());
+		if(matchinput.getResult_margin().equalsIgnoreCase("NA"))
+		{
+			System.out.println(matchinput.getResult_margin());
+			return null;
+
+		}
 	    match.setResultMargin(matchinput.getResult_margin());
 	    match.setUmpire1(matchinput.getUmpire1());
 	    match.setUmpire2(matchinput.getUmpire2());
